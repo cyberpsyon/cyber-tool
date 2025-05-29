@@ -3,12 +3,15 @@ import sys
 import pyfiglet
 import os
 
-def clear_terminal():
+def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-clear_terminal()
+def show_banner(title):
+    print(pyfiglet.figlet_format(title, "slant"))
 
-def display_menu():
+def red_team_menu():
+    clear_screen()
+    show_banner("Red Team Menu")
     menu = """
     [1] Subdomain Enumeration
     [2] Directory Enumeration
@@ -22,10 +25,35 @@ def display_menu():
     """
     print(menu)
 
+def blue_team_menu():
+    clear_screen()
+    show_banner("Blue Team Menu")
+    menu = """
+    [1] Hash Identifier
+    [2] Password Strength Checker
+    [3] Base64 Encoder/Decoder
+    [4] Port Scanner
+    [5] Log Parser
+    [6] File Integrity Checker
+    [7] Email Header Analyzer
+    [8] JWT Inspector
+    [9] Exit
+    """
+    print(menu)
 def main():
-    print(pyfiglet.figlet_format("Cyber Tool", "slant"))
-    display_menu()
-    choice = int(input("Enter your choice: "))
+    clear_screen()
+    show_banner("Cyber Tool")
+    print("[1] Red Team Tools\n[2] Blue Team Tools\n[3] Exit")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        red_team_menu()
+    elif choice == "2":
+        blue_team_menu()
+    elif choice == "3":
+        sys.exit()
+    else:
+        print("Invalid choice")
+
 
 if __name__ == "__main__":
     main()
