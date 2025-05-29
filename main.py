@@ -21,10 +21,11 @@ def red_team_menu():
     [6] SSH Brute Force
     [7] Web Login Form Brute Force
     [8] SQL Injection Exploit
-    [9] Exit
+    [9] Back to Main Menu
+    [10] Exit
     """
     print(menu)
-
+    red_choice = input("Enter your choice: ")
 def blue_team_menu():
     clear_screen()
     show_banner("Blue Team Menu")
@@ -37,12 +38,14 @@ def blue_team_menu():
     [6] File Integrity Checker
     [7] Email Header Analyzer
     [8] JWT Inspector
-    [9] Exit
+    [9] Back to Main Menu
+    [10] Exit
     """
     print(menu)
+    blue_choice = input("Enter your choice: ")
 def main():
     clear_screen()
-    show_banner("Cyber Tool")
+    show_banner("CyberPsyonOps")
     print("[1] Red Team Tools\n[2] Blue Team Tools\n[3] Exit")
     choice = input("Enter your choice: ")
     if choice == "1":
