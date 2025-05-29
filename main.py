@@ -45,7 +45,7 @@ def blue_team_menu():
     blue_choice = input("Enter your choice: ")
 def main():
     clear_screen()
-    show_banner("CyberPsyonOps")
+    show_banner("RBDuoSec")
     print("[1] Red Team Tools\n[2] Blue Team Tools\n[3] Exit")
     choice = input("Enter your choice: ")
     if choice == "1":
