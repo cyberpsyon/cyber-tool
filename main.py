@@ -7,7 +7,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def show_banner(title):
-    print(pyfiglet.figlet_format(title, "slant"))
+    print(pyfiglet.figlet_format(title, "Standard"))
 
 def red_team_menu():
     clear_screen()
@@ -45,7 +45,7 @@ def blue_team_menu():
     blue_choice = input("Enter your choice: ")
 def main():
     clear_screen()
-    show_banner("RBDuoSec")
+    show_banner("PyDuoSec")
     print("[1] Red Team Tools\n[2] Blue Team Tools\n[3] Exit")
     choice = input("Enter your choice: ")
     if choice == "1":
