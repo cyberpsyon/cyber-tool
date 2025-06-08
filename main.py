@@ -7,7 +7,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def show_banner(title):
-    print(pyfiglet.figlet_format(title, "Standard"))
+    print(pyfiglet.figlet_format(title, "standard"))
 
 def red_team_menu():
     clear_screen()
